@@ -1,5 +1,5 @@
 <div>ID: <%= @user.id %></div>
 <div>Email: <%= @user.email %></div>
-<div>Data de criação: <%= @user.created_at.strftime('%Y-%m-%d %H:%M:%S') %></div>
+<div>Data de criação: <%= @user.created_at.strftime('%d/%m/%Y %H:%M:%S') %></div>
 
 <%= link_to('Voltar', users_path) %>

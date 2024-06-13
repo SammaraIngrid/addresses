@@ -1,0 +1,27 @@
+<h2>Usuários</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>email</th>
+    <th>Data de Criação</th>
+    <th>Ações</th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.email %></td>
+      <td><%= user.created_at.strftime('%Y-%m-%d %H:%M:%S') %></td>
+      <td>
+        <%= link_to('Excluir', user_path(user), data: { turbo_method: :delete, turbo_confirm: "Deseja excluir?" }) %>
+        <%= link_to('Detalhes', user_path(user)) %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>

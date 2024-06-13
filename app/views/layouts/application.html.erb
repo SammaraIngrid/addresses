@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Addresses</title>
+    <title>
+      Addresses
+    </title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", media: 'all' %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+    <% if current_user.present? %>
+      <menu>
+        <li><%= link_to('Home', root_path) %></li>
+        <li><%= link_to('Usuários', users_path) %></li>
+        <li><%= link_to('Sair', destroy_user_session_path, data: { turbo_method: :delete }) %></li>
+      </menu>
+    <% end %>
     <%= yield %>
   </body>
 </html>

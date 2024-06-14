@@ -1,5 +1,35 @@
-<div>ID: <%= @user.id %></div>
-<div>Email: <%= @user.email %></div>
-<div>Data de criação: <%= @user.created_at.strftime('%d/%m/%Y %H:%M:%S') %></div>
+<h2>Usuário</h2>
+
+<table style="width:100%; border: 1px solid black; border-collapse: collapse;">
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">ID</th>
+    <td style="border: 1px solid black; padding: 8px;"><%= @user.id %></td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Email</th>
+    <td style="border: 1px solid black; padding: 8px;"><%= @user.email %></td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Data de criação</th>
+    <td style="border: 1px solid black; padding: 8px;"><%= @user.created_at.strftime('%d/%m/%Y %H:%M:%S') %></td>
+  </tr>
+</table>
 
 <%= link_to('Voltar', users_path) %>
+
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+</style>

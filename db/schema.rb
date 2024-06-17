@@ -10,19 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_14_144052) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_14_125757) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "addresses", force: :cascade do |t|
     t.string "zip_code", null: false
+    t.string "street", null: false
     t.string "neighborhood", null: false
+    t.string "number", null: false
     t.string "city", null: false
     t.string "state", null: false
-    t.string "complement", null: false
+    t.string "complement"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "number"
+    t.index ["zip_code"], name: "index_addresses_on_zip_code", unique: true
   end
 
   create_table "users", force: :cascade do |t|

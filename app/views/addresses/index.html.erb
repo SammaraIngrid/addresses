@@ -20,8 +20,9 @@
 <table style="width:100%">
   <tr>
     <th>Cep</th>
-    <th>Bairro</th>
+    <th>Rua/Avenida</th>
     <th>Número</th>
+    <th>Bairro</th>
     <th>Cidade</th>
     <th>Estado</th>
     <th>Complemento</th>
@@ -30,8 +31,9 @@
   <% @addresses.each do |address| %>
     <tr>
       <td><%= address.zip_code %></td>
-      <td><%= address.neighborhood %></td>
+      <td><%= address.street %></td>
       <td><%= address.number %></td>
+      <td><%= address.neighborhood %></td>
       <td><%= address.city %></td>
       <td><%= address.state %></td>
       <td><%= address.complement %></td>

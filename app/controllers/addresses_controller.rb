@@ -1,6 +1,8 @@
 class AddressesController < ApplicationController
   def index
-    @addresses = Address.all.order(created_at: :desc)
+    @query = Address.all.order(created_at: :desc).ransack(params[:q])
+
+    @addresses = @query.result
   end
 
   def show
@@ -18,6 +20,16 @@ class AddressesController < ApplicationController
       redirect_to(addresses_path, notice: 'Criado com sucesso')
     else
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def edit; end
+
+  def update
+    if @address.update(address_params)
+      redirect_to @address, notice: 'Endereço atualizado com sucesso.'
+    else
+      render :edit
     end
   end
 

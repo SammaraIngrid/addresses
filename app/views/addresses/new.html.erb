@@ -1,25 +1,5 @@
-<%= form_with(model: @address, local: true) do |f| %>
+<%= render partial: 'layouts/components/errors', locals: { resource: @address } %>
 
-  <%= f.label :zip_code, "CEP" %>
-  <%= f.text_field :zip_code, size: 9, maxlength: 9, pattern: "\\d{5}-\\d{3}", placeholder: "57081-555" %>
-
-  <%= f.label "Bairro" %>
-  <%= f.text_field :neighborhood %>
-
-  <%= f.label "Número" %>
-  <%= f.text_field :number %>
-
-  <%= f.label "Cidade" %>
-  <%= f.text_field :city %>
-
-  <%= f.label "Estado" %>
-  <%= f.text_field :state %>
-
-  <%= f.label "Complemento" %>
-  <%= f.text_area :complement %>
-
-  <%= f.submit "Criar" %>
-
-  <%= link_to('Voltar', addresses_path) %>
-
+<%= form_with(model: @address, local: true) do |form| %>
+  <%= render partial: 'addresses/components/form', locals: { form: form } %>
 <% end %>

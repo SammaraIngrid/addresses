@@ -1,37 +1,37 @@
 <h2>Endereço</h2>
 
-<table style="width:100%; border: 1px solid black; border-collapse: collapse;">
+<%= link_to('Voltar', addresses_path) %>
+
+<table style="width:100%; border: 1px solid black; border-collapse: collapse; margin-top: 10px;">
   <tr>
-    <th style="border: 1px solid black; padding: 8px;">ID</th>
-    <td style="border: 1px solid black; padding: 8px;"><%= @address.id %></td>
+    <th>ID</th>
+    <td><%= @address.id %></td>
   </tr>
   <tr>
-    <th style="border: 1px solid black; padding: 8px;">CEP</th>
-    <td style="border: 1px solid black; padding: 8px;"><%= @address.zip_code %></td>
+    <th>CEP</th>
+    <td><%= @address.zip_code %></td>
   </tr>
   <tr>
-    <th style="border: 1px solid black; padding: 8px;">Bairro</th>
-    <td style="border: 1px solid black; padding: 8px;"><%= @address.neighborhood %></td>
+    <th>Bairro</th>
+    <td><%= @address.neighborhood %></td>
   </tr>
   <tr>
-    <th style="border: 1px solid black; padding: 8px;">Número</th>
-    <td style="border: 1px solid black; padding: 8px;"><%= @address.number %></td>
+    <th>Número</th>
+    <td><%= @address.number %></td>
   </tr>
   <tr>
-    <th style="border: 1px solid black; padding: 8px;">Cidade</th>
-    <td style="border: 1px solid black; padding: 8px;"><%= @address.city %></td>
+    <th>Cidade</th>
+    <td><%= @address.city %></td>
   </tr>
   <tr>
-    <th style="border: 1px solid black; padding: 8px;">Estado</th>
-    <td style="border: 1px solid black; padding: 8px;"><%= @address.state %></td>
+    <th>Estado</th>
+    <td><%= @address.state %></td>
   </tr>
   <tr>
-    <th style="border: 1px solid black; padding: 8px;">Complemento</th>
-    <td style="border: 1px solid black; padding: 8px;"><%= @address.complement %></td>
+    <th>Complemento</th>
+    <td><%= @address.complement %></td>
   </tr>
 </table>
-
-<%= link_to('Voltar', addresses_path) %>
 
 <style>
   table, th, td {

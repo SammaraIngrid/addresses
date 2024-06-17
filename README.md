@@ -27,8 +27,14 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 
 ```rails db:create```
 ```rails db:migrate```
+```rails db:seed```
 
 ##  Uso
 
-```rails s```  ou ```rails server```
-
+1. Rode o servidor: ```rails s```  ou ```rails server```;
+2. Acesse `http://localhost:3000`;
+3. Acesse com as credenciais:
+```
+admin@gmail.com
+123456
+```

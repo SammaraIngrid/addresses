@@ -13,7 +13,7 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <%= javascript_importmap_tags %>
   </head>
-
+  <body>
     <% if current_user.present? %>
       <menu>
         <li><%= link_to('Home', root_path) %></li>

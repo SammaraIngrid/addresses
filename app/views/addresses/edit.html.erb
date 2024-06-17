@@ -1,5 +1,7 @@
 <h2>Editar Endereço</h2>
 
+<%= render partial: 'layouts/components/errors', locals: { resource: @address } %>
+
 <%= form_with(model: @address, local: true) do |form| %>
   <div class="field">
     <%= form.label :zip_code, "CEP" %>

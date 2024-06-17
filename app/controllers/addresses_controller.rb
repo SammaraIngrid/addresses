@@ -1,4 +1,6 @@
 class AddressesController < ApplicationController
+  before_action :set_address, only: [:edit, :update]
+
   def index
     @query = Address.all.order(created_at: :desc).ransack(params[:q])
 
@@ -29,7 +31,7 @@ class AddressesController < ApplicationController
     if @address.update(address_params)
       redirect_to @address, notice: 'Endereço atualizado com sucesso.'
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
@@ -44,6 +46,10 @@ class AddressesController < ApplicationController
   end
 
   private
+
+  def set_address
+    @address = Address.find(params[:id])
+  end
 
   def address_params
     params.require(:address)

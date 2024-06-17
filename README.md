@@ -1,24 +1,34 @@
-# README
+# Addresses
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+O **Gerenciador de Endereços** é uma aplicação web desenvolvida com Ruby on Rails que permite aos usuários gerenciar seus endereços de maneira eficiente e organizada. Com esta aplicação, os usuários podem adicionar, editar, visualizar e excluir endereços.
 
-Things you may want to cover:
 
-* Ruby version
+# Instalação
 
-* System dependencies
+### Pré-requisitos:
 
-* Configuration
+Certifique-se de ter as seguintes ferramentas instaladas: 
+- [Ruby](https://www.ruby-lang.org/en/downloads/) (versão 3.1.0)
+- [Rails](https://rubyonrails.org/) (versão 7.1.3.4) 
+- [PostgreSQL](https://www.postgresql.org/download/)
 
-* Database creation
+### Passos de Instalação:
 
-* Database initialization
+- Passo 1:  Clone o repositório:
 
-* How to run the test suite
+```git clone https://github.com/SammaraIngrid/addresses.git```
+```cd addresses```
 
-* Services (job queues, cache servers, search engines, etc.)
+- Passo 2:  Instale as dependências do projeto:
 
-* Deployment instructions
+```bundle install```
 
-* ...
+- Passo 3:  Configure o banco de dados:
+
+```rails db:create```
+```rails db:migrate```
+
+##  Uso
+
+```rails s```  ou ```rails server```
+

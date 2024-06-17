@@ -1,0 +1,51 @@
+<h2>Endereços</h2>
+
+<%= link_to('Criar um novo endereço', new_address_path) %><p>
+
+<%= search_form_for(@query, url: addresses_path) do |form| %>
+  <div>
+    <%= form.label :zip_code_cont, "CEP" %>
+    <%= form.text_field :zip_code_cont, placeholder: "Busque pelo CEP" %>
+  </div>
+  <div style="margin-top: 10px; margin-bottom: 50px;">
+    <%= link_to(url_for, class: 'btn btn-sm -standard') do %>
+      Limpar
+    <% end %>
+    <%= button_tag(class: 'btn btn-sm -transparent-standard') do %>
+      Buscar
+    <% end %>
+  </div>
+<% end %>
+
+<table style="width:100%">
+  <tr>
+    <th>Cep</th>
+    <th>Bairro</th>
+    <th>Número</th>
+    <th>Cidade</th>
+    <th>Estado</th>
+    <th>Complemento</th>
+    <th>Ações</th>
+  </tr>
+  <% @addresses.each do |address| %>
+    <tr>
+      <td><%= address.zip_code %></td>
+      <td><%= address.neighborhood %></td>
+      <td><%= address.number %></td>
+      <td><%= address.city %></td>
+      <td><%= address.state %></td>
+      <td><%= address.complement %></td>
+      <td>
+        <%= link_to('Excluir', address_path(address), data: { turbo_method: :delete, turbo_confirm: "Deseja excluir?" }) %>
+        <%= link_to('Editar', edit_address_path(address)) %>
+        <%= link_to('Detalhes', address_path(address)) %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>

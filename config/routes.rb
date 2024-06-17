@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   root :to => "home#index"
 
   resources :users
+  resources :addresses, only: [:edit, :update, :show, :index, :new, :create, :destroy]
 end

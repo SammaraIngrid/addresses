@@ -1,0 +1,51 @@
+<h2>Endereço</h2>
+
+<table style="width:100%; border: 1px solid black; border-collapse: collapse;">
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">ID</th>
+    <td style="border: 1px solid black; padding: 8px;"><%= @address.id %></td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">CEP</th>
+    <td style="border: 1px solid black; padding: 8px;"><%= @address.zip_code %></td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Bairro</th>
+    <td style="border: 1px solid black; padding: 8px;"><%= @address.neighborhood %></td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Número</th>
+    <td style="border: 1px solid black; padding: 8px;"><%= @address.number %></td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Cidade</th>
+    <td style="border: 1px solid black; padding: 8px;"><%= @address.city %></td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Estado</th>
+    <td style="border: 1px solid black; padding: 8px;"><%= @address.state %></td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Complemento</th>
+    <td style="border: 1px solid black; padding: 8px;"><%= @address.complement %></td>
+  </tr>
+</table>
+
+<%= link_to('Voltar', addresses_path) %>
+
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+</style>

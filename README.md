@@ -25,9 +25,7 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 
 - Passo 3:  Configure o banco de dados:
 
-```rails db:create```
-```rails db:migrate```
-```rails db:seed```
+```rails db:create && rails db:migrate && rails db:seed```
 
 ##  Uso
 

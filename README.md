@@ -1,3 +1,4 @@
+
 # Addresses
 
 O **Gerenciador de Endereços** é uma aplicação web desenvolvida com Ruby on Rails que permite aos usuários gerenciar seus endereços de maneira eficiente e organizada. Com esta aplicação, os usuários podem adicionar, editar, visualizar e excluir endereços.
@@ -36,3 +37,8 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 admin@gmail.com
 123456
 ```
+## Teste
+
+Para rodar os testes, execute: 
+
+```bundle exec rspec```

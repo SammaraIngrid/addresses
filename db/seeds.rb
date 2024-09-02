@@ -1,1 +1,1 @@
-User.create(email: 'admin@gmail.com', password: 123456)
+FactoryBot.create(:user, email: 'admin@gmail.com', password: 123456)

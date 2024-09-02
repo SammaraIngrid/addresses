@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>
-      Addresses
-    </title>
+    <title>Addresses</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "application", media: 'all' %>
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css", media: "all" %>
+    <%= stylesheet_link_tag "application", media: 'all', "data-turbo-track": "reload" %>
+
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <%= javascript_importmap_tags %>
   </head>
   <body>
     <% if current_user.present? %>
-      <menu>
-        <li><%= link_to('Home', root_path) %></li>
-        <li><%= link_to('Usuários', users_path) %></li>
-        <li><%= link_to('Endereços', addresses_path) %></li>
-        <li><%= link_to('Sair', destroy_user_session_path, data: { turbo_method: :delete }) %></li>
-      </menu>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><%= link_to 'Home', root_path, class: 'nav-link' %></li>
+              <li class="nav-item"><%= link_to 'Usuários', users_path, class: 'nav-link' %></li>
+              <li class="nav-item"><%= link_to 'Endereços', addresses_path, class: 'nav-link' %></li>
+              <li class="nav-item"><%= link_to 'Sair', destroy_user_session_path, class: 'nav-link' %></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <% end %>
     <% flash.each do |type, message| %>
-      <div style="color: <%= type == 'notice' ? 'green' : 'red' %>">
+      <div class="alert <%= type == 'notice' ? 'alert-success' : 'alert-danger' %>">
         <%= message %>
       </div>
     <% end %>
     <%= yield %>
+
+    <footer class="bg-light text-center py-3">
+    <div class="container">
+      <p class="mb-1">Siga-nos nas redes sociais:</p>
+      <p class="mb-1">@Addresses_END</p>
+
+      <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank" class="text-dark me-3">
+          <i class="fab fa-instagram fa-lg"></i>
+        </a>
+        <a href="https://wa.me/yourphonenumber" target="_blank" class="text-dark me-3">
+          <i class="fab fa-whatsapp fa-lg"></i>
+        </a>
+      </div>
+      <p class="mb-0">&copy; www.addresses.com.br</p>
+    </div>
+  </footer>
+
+    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js", "data-turbo-track": "reload" %>
   </body>
 </html>

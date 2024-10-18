@@ -13,23 +13,23 @@
 }
 
 .btn-custom {
-  background-color: #7D5B8C; /* Cor personalizada para os botões */
-  color: white; /* Cor do texto dos botões */
+  background-color: #7D5B8C;
+  color: white;
 }
 
 .btn-custom:hover {
-  background-color: #6B4F6B; /* Cor ao passar o mouse */
+  background-color: #6B4F6B;
 }
 
 h2 {
-  margin-left: 0; /* Garante que o título fique à esquerda */
-  margin-right: 10px; /* Espaço à direita do título */
+  margin-left: 0;
+  margin-right: 10px;
 }
 
 .btn-sm {
-  color: black; /* Cor dos ícones dos botões */
+  color: black;
 }
 
 .btn-sm i {
-  font-size: 1.2rem; /* Ajusta o tamanho do ícone */
+  font-size: 1.2rem;
 }

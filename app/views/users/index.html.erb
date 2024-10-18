@@ -1,27 +1,29 @@
-<h2>Usuários</h2>
+<h2 class="float-start mt-4" style="margin-right: 10px;">Usuários</h2>
 
-<table style="width:100%">
-  <tr>
-    <th>ID</th>
-    <th>email</th>
-    <th>Data de Criação</th>
-    <th>Ações</th>
-  </tr>
-  <% @users.each do |user| %>
+<div class="clearfix"></div>
+
+<table class="table table-striped table-hover table-bordered">
+  <thead>
     <tr>
-      <td><%= user.id %></td>
-      <td><%= user.email %></td>
-      <td><%= user.created_at.strftime('%d/%m/%Y %H:%M:%S') %></td>
-      <td>
-        <%= link_to('Excluir', user_path(user), data: { turbo_method: :delete, turbo_confirm: "Deseja excluir?" }) %>
-        <%= link_to('Detalhes', user_path(user)) %>
-      </td>
+      <th>ID</th>
+      <th>Email</th>
+      <th>Data de Criação</th>
+      <th>Ações</th>
     </tr>
-  <% end %>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.email %></td>
+        <td><%= user.created_at.strftime('%d/%m/%Y %H:%M:%S') %></td>
+        <td>
+          <%= link_to('<i class="bi bi-trash"></i>'.html_safe, user_path(user), class: 'btn btn-sm', data: { turbo_method: :delete, turbo_confirm: "Deseja excluir?" }) %>
+          <%= link_to('<i class="bi bi-info-circle"></i>'.html_safe, user_path(user), class: 'btn btn-sm') %> <!-- Cor do botão detalhes -->
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<style>
-table, th, td {
-  border:1px solid black;
-}
-</style>
+<div class="clearfix"></div>

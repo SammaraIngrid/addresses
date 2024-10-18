@@ -1,0 +1,32 @@
+.clearfix {
+  clear: both;
+}
+
+.table {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table th {
+  background-color: #7D5B8C;
+  color: white;
+}
+
+.table tr {
+  background-color: #7D5B8C;
+  color: white;
+}
+
+.btn-sm {
+  color: black;
+}
+
+.btn-sm i {
+  font-size: 1.2rem;
+}

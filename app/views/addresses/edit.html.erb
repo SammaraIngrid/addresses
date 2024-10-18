@@ -1,9 +1,61 @@
-<h2>Editar Endereço</h2>
+<div class="clearfix"></div>
 
 <%= render partial: 'layouts/components/errors', locals: { resource: @address } %>
 
 <%= form_with(model: @address, local: true) do |form| %>
-  <%= render partial: 'addresses/components/form', locals: { form: form } %>
-<% end %>
+  <div class="row mb-3" style="margin-left: 10px;">
+    <div class="col-md-6">
+      <%= form.label :zip_code, "CEP", class: "form-label" %>
+      <%= form.text_field :zip_code, class: "form-control", placeholder: "Digite o CEP" %>
+    </div>
+  </div>
 
-<%= link_to 'Voltar', addresses_path %>
+  <div class="row mb-3" style="margin-left: 10px;">
+    <div class="col-md-6">
+      <%= form.label :street, "Rua/Avenida", class: "form-label" %>
+      <%= form.text_field :street, class: "form-control", placeholder: "Digite a Rua/Avenida" %>
+    </div>
+  </div>
+
+  <div class="row mb-3" style="margin-left: 10px;">
+    <div class="col-md-6">
+      <%= form.label :number, "Número", class: "form-label" %>
+      <%= form.text_field :number, class: "form-control", placeholder: "Digite o Número" %>
+    </div>
+  </div>
+
+  <div class="row mb-3" style="margin-left: 10px;">
+    <div class="col-md-6">
+      <%= form.label :neighborhood, "Bairro", class: "form-label" %>
+      <%= form.text_field :neighborhood, class: "form-control", placeholder: "Digite o Bairro" %>
+    </div>
+  </div>
+
+  <div class="row mb-3" style="margin-left: 10px;">
+    <div class="col-md-6">
+      <%= form.label :city, "Cidade", class: "form-label" %>
+      <%= form.text_field :city, class: "form-control", placeholder: "Digite a Cidade" %>
+    </div>
+  </div>
+
+  <div class="row mb-3" style="margin-left: 10px;">
+    <div class="col-md-6">
+      <%= form.label :state, "Estado", class: "form-label" %>
+      <%= form.text_field :state, class: "form-control", placeholder: "Digite o Estado" %>
+    </div>
+  </div>
+
+  <div class="row mb-3" style="margin-left: 10px;">
+    <div class="col-md-6">
+      <%= form.label :complement, "Complemento", class: "form-label" %>
+      <%= form.text_field :complement, class: "form-control", placeholder: "Digite o Complemento" %>
+    </div>
+  </div>
+
+  <div class="row mb-4" style="margin-left: 10px;">
+    <div class="col-md-6">
+      <%= button_tag "Salvar", class: 'btn btn-custom' %>
+      <%= link_to 'Voltar', addresses_path, class: 'btn btn-secondary ms-2' %>
+    </div>
+  </div>
+<% end %>

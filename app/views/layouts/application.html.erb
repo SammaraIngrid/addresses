@@ -7,6 +7,8 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css", media: "all" %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <%= stylesheet_link_tag "enderecos", media: "all" %> <!-- Adicione esta linha -->
     <%= stylesheet_link_tag "application", media: 'all', "data-turbo-track": "reload" %>
 
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
@@ -38,21 +40,21 @@
     <%= yield %>
 
     <footer class="bg-light text-center py-3">
-    <div class="container">
-      <p class="mb-1">Siga-nos nas redes sociais:</p>
-      <p class="mb-1">@Addresses_END</p>
+      <div class="container">
+        <p class="mb-1">Siga-nos nas redes sociais:</p>
+        <p class="mb-1">@Addresses_END</p>
 
-      <div class="social-icons">
-        <a href="https://www.instagram.com" target="_blank" class="text-dark me-3">
-          <i class="fab fa-instagram fa-lg"></i>
-        </a>
-        <a href="https://wa.me/yourphonenumber" target="_blank" class="text-dark me-3">
-          <i class="fab fa-whatsapp fa-lg"></i>
-        </a>
+        <div class="social-icons">
+          <a href="https://www.instagram.com" target="_blank" class="text-dark me-3">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a href="https://wa.me/yourphonenumber" target="_blank" class="text-dark me-3">
+            <i class="fab fa-whatsapp fa-lg"></i>
+          </a>
+        </div>
+        <p class="mb-0">&copy; www.addresses.com.br</p>
       </div>
-      <p class="mb-0">&copy; www.addresses.com.br</p>
-    </div>
-  </footer>
+    </footer>
 
     <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js", "data-turbo-track": "reload" %>

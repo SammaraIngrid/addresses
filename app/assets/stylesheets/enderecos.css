@@ -1,0 +1,35 @@
+.clearfix {
+  clear: both;
+}
+
+.table {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.table th, .table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.btn-custom {
+  background-color: #7D5B8C; /* Cor personalizada para os botões */
+  color: white; /* Cor do texto dos botões */
+}
+
+.btn-custom:hover {
+  background-color: #6B4F6B; /* Cor ao passar o mouse */
+}
+
+h2 {
+  margin-left: 0; /* Garante que o título fique à esquerda */
+  margin-right: 10px; /* Espaço à direita do título */
+}
+
+.btn-sm {
+  color: black; /* Cor dos ícones dos botões */
+}
+
+.btn-sm i {
+  font-size: 1.2rem; /* Ajusta o tamanho do ícone */
+}

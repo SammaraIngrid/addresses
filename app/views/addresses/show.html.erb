@@ -1,55 +1,44 @@
-<h2>Endereço</h2>
+<div class="float-end mt-4 me-3">
+  <%= link_to 'Voltar', addresses_path, class: 'btn btn-secondary' %>
+</div>
 
-<%= link_to('Voltar', addresses_path) %>
+<div class="clearfix"></div>
 
-<table style="width:100%; border: 1px solid black; border-collapse: collapse; margin-top: 10px;">
-  <tr>
-    <th>ID</th>
-    <td><%= @address.id %></td>
-  </tr>
-  <tr>
-    <th>CEP</th>
-    <td><%= @address.zip_code %></td>
-  </tr>
-  <tr>
-    <th>Rua/Avenida</th>
-    <td><%= @address.street %></td>
-  </tr>
-  <tr>
-    <th>Número</th>
-    <td><%= @address.number %></td>
-  </tr>
-  <tr>
-    <th>Bairro</th>
-    <td><%= @address.neighborhood %></td>
-  </tr>
-  <tr>
-    <th>Cidade</th>
-    <td><%= @address.city %></td>
-  </tr>
-  <tr>
-    <th>Estado</th>
-    <td><%= @address.state %></td>
-  </tr>
-  <tr>
-    <th>Complemento</th>
-    <td><%= @address.complement %></td>
-  </tr>
+<table class="table table-striped table-hover table-bordered mt-4">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <td><%= @address.id %></td>
+    </tr>
+    <tr>
+      <th>CEP</th>
+      <td><%= @address.zip_code %></td>
+    </tr>
+    <tr>
+      <th>Rua/Avenida</th>
+      <td><%= @address.street %></td>
+    </tr>
+    <tr>
+      <th>Número</th>
+      <td><%= @address.number %></td>
+    </tr>
+    <tr>
+      <th>Bairro</th>
+      <td><%= @address.neighborhood %></td>
+    </tr>
+    <tr>
+      <th>Cidade</th>
+      <td><%= @address.city %></td>
+    </tr>
+    <tr>
+      <th>Estado</th>
+      <td><%= @address.state %></td>
+    </tr>
+    <tr>
+      <th>Complemento</th>
+      <td><%= @address.complement %></td>
+    </tr>
+  </thead>
 </table>
 
-<style>
-  table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
-  th, td {
-    padding: 8px;
-    text-align: left;
-  }
-  th {
-    background-color: #f2f2f2;
-  }
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-</style>
+<div class="clearfix"></div>

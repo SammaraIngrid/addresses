@@ -1,0 +1,22 @@
+.layout-clear {
+  clear: both;
+}
+
+.table-responsive {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.section-title {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.btn-custom {
+  background-color: #7D5B8C;
+  color: white;
+}
+
+.btn-custom:hover {
+  background-color: #6B4F6B;
+}

@@ -1,0 +1,35 @@
+.clearfix {
+  clear: both;
+}
+
+.table {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.table th, .table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.btn-custom {
+  background-color: #7D5B8C;
+  color: white;
+}
+
+.btn-custom:hover {
+  background-color: #6B4F6B;
+}
+
+h2 {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.btn-sm {
+  color: black;
+}
+
+.btn-sm i {
+  font-size: 1.2rem;
+}
